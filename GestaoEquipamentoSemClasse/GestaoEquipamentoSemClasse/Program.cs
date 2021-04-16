@@ -3,9 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-//TO DO
-
-//Validar a entrada das variaveis DateTime
 
 
 namespace GestaoEquipamentos
@@ -72,26 +69,29 @@ namespace GestaoEquipamentos
 
                                     Console.WriteLine("Informe o número de série do equipamento:");
                                     String numeroSerieEquipamento = Console.ReadLine();
+                                    
+                                    DateTime dataFabricacaoEquipamento;
+                                    try
+                                    {
+                                        Console.WriteLine("Informe a data de fabricação do equipamento:");
+                                        dataFabricacaoEquipamento = Convert.ToDateTime(Console.ReadLine());
 
-                                    Console.WriteLine("Informe a data de fabricação do equipamento:");
-                                    DateTime dataFabricacaoEquipamento = Convert.ToDateTime(Console.ReadLine());
+                                    }
+                                    catch
+                                    {
+                                        Console.Clear();
+                                        Console.WriteLine("Data inválida, tente novamente");
+                                        Console.ReadLine();
+                                        Console.Clear();
+                                        break;
+                                    }
+
+                                    //dataFabricacaoEquipamento = Convert.ToDateTime(Console.ReadLine());
 
                                     Console.WriteLine("Informe o fabricante do equipamento:");
                                     String fabricanteEquipamento = Console.ReadLine();
 
                                     Console.Clear();
-                                    /*try
-                                    {
-                                        Console.WriteLine("Informe a data de fabricação do equipamento:");
-                                        DateTime dataFabricacaoEquipamento = Console.ReadLine();
-                                    }
-                                    catch
-                                    {
-                                        Console.WriteLine("Data inválida, tente novamente");
-                                        Console.ReadLine();
-                                        Console.Clear();
-                                        break;
-                                    }*/
 
                                     int idCorrecao = 0; //vai armazenar o equipamento no primeiro id zero que achar
                                     foreach(int id in idEquipamentoCadastrado)
@@ -183,6 +183,19 @@ namespace GestaoEquipamentos
                                         else if (opcaoAlterarEquipamentoCampoSelecionado == 4)
                                         {
                                             Console.WriteLine("Digite o novo valor de data de fabricação");
+                                            DateTime dataFabricacaoEquipamento;
+                                            try
+                                            {
+                                                dataFabricacaoEquipamento = Convert.ToDateTime(Console.ReadLine());
+                                            }
+                                            catch
+                                            {
+                                                Console.Clear();
+                                                Console.WriteLine("Data inválida, tente novamente");
+                                                Console.ReadLine();
+                                                Console.Clear();
+                                                break;
+                                            }
                                             dataFabricacaoEquipamentoCadastrado[opcaoAlterarEquipamentoSelecionado] = Convert.ToDateTime(Console.ReadLine());
                                         }
                                         else if (opcaoAlterarEquipamentoCampoSelecionado == 5)
@@ -356,7 +369,22 @@ namespace GestaoEquipamentos
                                     else
                                     {
                                         Console.WriteLine("Informe a data de abertura da manutenção:");
-                                        DateTime dataAberturaManutencao = Convert.ToDateTime(Console.ReadLine());
+
+                                        DateTime dataAberturaManutencao;
+                                        try
+                                        {
+                                            dataAberturaManutencao = Convert.ToDateTime(Console.ReadLine());
+                                        }
+                                        catch
+                                        {
+                                            Console.Clear();
+                                            Console.WriteLine("Data inválida, tente novamente");
+                                            Console.ReadLine();
+                                            Console.Clear();
+                                            break;
+                                        }
+
+                                        //dataAberturaManutencao = Convert.ToDateTime(Console.ReadLine());
 
                                         Console.Clear();
 
@@ -377,6 +405,7 @@ namespace GestaoEquipamentos
                                         }
                                     }
                                 }
+
                                 //editar manutencao
                                 else if (opcaoManutencao == 2)
                                 {
@@ -481,7 +510,22 @@ namespace GestaoEquipamentos
                                             else if (opcaoAlterarManutencaoCampoSelecionado == 4)
                                             {
                                                 Console.WriteLine("Digite o novo valor de data de abertura");
-                                                dataAberturaManutencaoCadastrado[opcaoAlterarManutencaoSelecionado] = Convert.ToDateTime(Console.ReadLine());
+
+                                                DateTime dataAberturaManutencaoTestado;
+                                                try
+                                                {
+                                                    dataAberturaManutencaoTestado = Convert.ToDateTime(Console.ReadLine());
+                                                }
+                                                catch
+                                                {
+                                                    Console.Clear();
+                                                    Console.WriteLine("Data inválida, tente novamente");
+                                                    Console.ReadLine();
+                                                    Console.Clear();
+                                                    break;
+                                                }
+
+                                                dataAberturaManutencaoCadastrado[opcaoAlterarManutencaoSelecionado] = dataAberturaManutencaoTestado;
                                             }
                                             else
                                             {
@@ -492,6 +536,7 @@ namespace GestaoEquipamentos
                                         }
                                     }
                                 }
+
                                 //excluir manutencao
                                 else if (opcaoManutencao == 3)
                                 {
@@ -543,6 +588,7 @@ namespace GestaoEquipamentos
                                     idEquipamentoManutencaoCadastrado[opcaoExcluirManutencaoSelecionado] = 0;
                                     dataAberturaManutencaoCadastrado[opcaoExcluirManutencaoSelecionado] = DateTime.MinValue;
                                 }
+
                                 //mostrar manutencao
                                 else if (opcaoManutencao == 4)
                                 {
@@ -596,11 +642,13 @@ namespace GestaoEquipamentos
                                         Console.Clear();
                                     }
                                 }
+
                                 //sair do menu manutencao
                                 else if (opcaoManutencao == 5)
                                 {
                                     break;
                                 }
+
                                 //opcao de manutencao invalida
                                 else
                                 {
