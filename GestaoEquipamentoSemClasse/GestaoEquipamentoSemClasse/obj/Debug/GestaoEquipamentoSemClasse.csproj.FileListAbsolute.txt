@@ -1,0 +1,7 @@
+C:\Users\Carlos\source\repos\GestaoEquipamentoSemClasse\GestaoEquipamentoSemClasse\obj\Debug\GestaoEquipamentoSemClasse.csprojAssemblyReference.cache
+C:\Users\Carlos\source\repos\GestaoEquipamentoSemClasse\GestaoEquipamentoSemClasse\obj\Debug\GestaoEquipamentoSemClasse.csproj.CoreCompileInputs.cache
+C:\Users\Carlos\source\repos\GestaoEquipamentoSemClasse\GestaoEquipamentoSemClasse\bin\Debug\GestaoEquipamentoSemClasse.exe.config
+C:\Users\Carlos\source\repos\GestaoEquipamentoSemClasse\GestaoEquipamentoSemClasse\bin\Debug\GestaoEquipamentoSemClasse.exe
+C:\Users\Carlos\source\repos\GestaoEquipamentoSemClasse\GestaoEquipamentoSemClasse\bin\Debug\GestaoEquipamentoSemClasse.pdb
+C:\Users\Carlos\source\repos\GestaoEquipamentoSemClasse\GestaoEquipamentoSemClasse\obj\Debug\GestaoEquipamentoSemClasse.exe
+C:\Users\Carlos\source\repos\GestaoEquipamentoSemClasse\GestaoEquipamentoSemClasse\obj\Debug\GestaoEquipamentoSemClasse.pdb
